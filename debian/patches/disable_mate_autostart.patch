@@ -1,0 +1,10 @@
+Description: Disable autostart on Mate Desktop
+Author: Matias De lellis <mati86dl@gmail.com>
+
+--- epoptes-0.5.7.orig/epoptes-client/epoptes-client.desktop
++++ epoptes-0.5.7/epoptes-client/epoptes-client.desktop
+@@ -9,3 +9,4 @@ Terminal=false
+ Type=Application
+ Categories=Settings;System;
+ # X-GNOME-AutoRestart=true
++X-MATE-Autostart-enabled=false
