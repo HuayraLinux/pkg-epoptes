@@ -1,22 +1,22 @@
 Source: epoptes
 Section: admin
 Priority: extra
-Maintainer: Epoptes Developers <epoptes@lists.launchpad.net>
-Uploaders: Vagrant Cascadian <vagrant@debian.org>, Alkis Georgopoulos <alkisg@gmail.com>, Fotis Tsamis <ftsamis@gmail.com>
+Maintainer: Matias De lellis <mati86l@gmail.com>
+Uploaders: Matias De lellis <mati86l@gmail.com>
 Build-Depends: debhelper (>= 7.3.0),
  python (>= 2.6.5), 
  python-distutils-extra (>= 2.4)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-Bzr: http://bazaar.launchpad.net/~epoptes/epoptes/trunk
 Vcs-Browser: http://bazaar.launchpad.net/~epoptes/epoptes/trunk/files
 Homepage: http://www.epoptes.org
 
 Package: epoptes
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, adduser, librsvg2-common,
- notification-daemon | xfce4-notifyd, openssl, python-openssl,
- python-dbus, python-gtk2, python-notify, python-twisted-core,
- python-vte, xvnc4viewer | ssvnc | vnc-viewer
+Depends: ${python:Depends}, ${misc:Depends}, adduser, faketime, iperf,
+ librsvg2-common, notification-daemon | xfce4-notifyd, openssl, python-dbus,
+ python-gtk2, python-netifaces, python-notify, python-openssl, python-pycha,
+ python-twisted-core, xvnc4viewer | ssvnc | vnc-viewer
 Recommends: epoptes-client, xterm
 Description: Computer lab management tool
  Epoptes is an open source computer lab management and monitoring tool. It
@@ -30,9 +30,9 @@ Description: Computer lab management tool
 
 Package: epoptes-client
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, bsdmainutils, iproute,
- librsvg2-common, procps, python-gtk2, screen, socat, x11vnc,
- xvnc4viewer | ssvnc | vnc-viewer
+Depends: ${python:Depends}, ${misc:Depends}, bsdmainutils,
+ iperf, iproute2 | iproute, librsvg2-common, procps, python-gtk2,
+ screen, socat, x11vnc, xvnc4viewer | ssvnc | vnc-viewer
 Recommends: openssl, xterm
 Suggests: ethtool
 Description: Computer lab management tool (client)

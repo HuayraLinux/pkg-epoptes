@@ -23,18 +23,6 @@ install() {
     if ! getent group "$SOCKET_GROUP" >/dev/null; then
         addgroup --system "$SOCKET_GROUP"
     fi
-
-    if ! [ -f /etc/epoptes/server.key ] || ! [ -f /etc/epoptes/server.crt ]
-    then
-        openssl req -batch -x509 -nodes -newkey rsa:1024 -days 3652 \
-            -keyout /etc/epoptes/server.key -out /etc/epoptes/server.crt
-        chmod 600 /etc/epoptes/server.key
-        echo '
-A new OpenSSL certificate has been generated for epoptes.
-Please ensure that you transfer /etc/epoptes/server.crt
-to your clients by issuing `epoptes-client -c` from your
-regular workstations or from your LTSP chroots.' >&2
-    fi
 }
 
 case "$1" in
