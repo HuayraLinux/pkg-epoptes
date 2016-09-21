@@ -1,9 +1,17 @@
 Description: Disable autostart on Mate Desktop
 Author: Matias De lellis <mati86dl@gmail.com>
 
---- epoptes-0.5.8.orig/epoptes-client/epoptes-client.desktop
-+++ epoptes-0.5.8 /epoptes-client/epoptes-client.desktop
-@@ -9,3 +9,4 @@ Terminal=false
+--- epoptes-0.5.10.orig/epoptes-client/epoptes-client.desktop	2016-03-25 23:42:42.000000000 -0300
++++ epoptes-0.5.10/epoptes-client/epoptes-client.desktop	2016-09-21 09:42:34.966957637 -0300
+@@ -1,6 +1,7 @@
+ [Desktop Entry]
+ Name=Epoptes client service
+ Name[el]=Υπηρεσία πελάτη του Epoptes
++Name[es]=Servicio del cliente Epoptes
+ Comment=Epoptes computer lab administation tool client service
+ Comment[el]=Υπηρεσία πελάτη του λογισμικού διαχείρισης εργαστηρίων Epoptes
+ Exec=/usr/sbin/epoptes-client
+@@ -9,3 +10,5 @@ Terminal=false
  Type=Application
  Categories=Settings;System;
  # X-GNOME-AutoRestart=true
